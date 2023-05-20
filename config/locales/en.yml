@@ -4,29 +4,44 @@ en:
   activerecord:
     models:
       product: Product
+      user: User
+      category: Category
+
     attributes:
       product:
         title: "Title"
         description: "Description"
         price: "Price"
         photo: "Photo"
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: "can't be blank"
-            description:
-              blank: "can't be blank"
-            price:
-              blank: "can't be blank"
+      user:
+        email: "Email"
+        username: "Username"
+        password: "Password"
+      category:
+        name: "Name"
+    # errors:
+    #   models:
+    #     product:
+    #       attributes:
+    #         title:
+    #           blank: "can't be blank"
+    #         description:
+    #           blank: "can't be blank"
+    #         price:
+    #           blank: "can't be blank"
   common:
     confirm: "Are you sure?"
     back: "Go back"
     not_logged_in: "You have to login or create an account"
+    not_authorized: "You do not have permission for this action"
+    not_found: "Not found"
+
   shared:
     header:
       add: "Add product"
+      login: "Login"
+      register: "Register"
+      logout: "Logout"
   authentication:
     users:
       create:
@@ -35,6 +50,8 @@ en:
       create:
         created: "Welcome!"
         failed: "Invalid login!"
+      destroy:
+        destroyed: "Session ended. Bye!!"
   products:
     edit:
       title: "Edit product"
@@ -52,6 +69,7 @@ en:
     show:
       edit: "Edit product"
       delete: "Delete product"
+      view_more_products: "View more products by %{username}"
     create:
       created: "Your product has been successfully created"
     update:
