@@ -6,7 +6,6 @@ en:
       product: Product
       user: User
       category: Category
-
     attributes:
       product:
         title: "Title"
@@ -19,30 +18,19 @@ en:
         password: "Password"
       category:
         name: "Name"
-    # errors:
-    #   models:
-    #     product:
-    #       attributes:
-    #         title:
-    #           blank: "can't be blank"
-    #         description:
-    #           blank: "can't be blank"
-    #         price:
-    #           blank: "can't be blank"
   common:
     confirm: "Are you sure?"
     back: "Go back"
     not_logged_in: "You have to login or create an account"
-    not_authorized: "You do not have permission for this action"
+    not_authorized: "You don not have permissions for this action"
     not_found: "Not found"
-
   shared:
     header:
       add: "Add product"
       login: "Login"
       register: "Register"
       logout: "Logout"
-      favorites: "My Favorites"
+      favorites: "My favorites"
   authentication:
     users:
       create:
@@ -52,12 +40,18 @@ en:
         created: "Welcome!"
         failed: "Invalid login!"
       destroy:
-        destroyed: "Session ended. Bye!!"
+        destroyed: "Session ended. Bye!"
   products:
     edit:
       title: "Edit product"
     new:
       title: "Add product"
+    form:
+      title_placeholder: "What do you want to sell?"
+      description_placeholder: "Could you describe your product?"
+      price_placeholder: "For how much?"
+      category_placeholder: "In what category could fit better?"
+      submit: "Sell it now!"
     index:
       title: "Products:"
       all: "All"
@@ -96,4 +90,4 @@ en:
       title: "New category"
   favorites:
     index:
-      title: "My Favorites"
+      title: "My favorites"
