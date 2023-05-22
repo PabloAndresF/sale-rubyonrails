@@ -31,6 +31,7 @@ class ProductsController < ApplicationController
   def update
     authorize! product
     if product.update(product_params)
+      product.broadcast
       redirect_to products_path, notice: t(".updated")
     else
       render :edit, status: :unprocessable_entity
@@ -51,10 +52,10 @@ class ProductsController < ApplicationController
   end
 
   def product_params_index
-    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page,:favorites,:user_id)
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favorites, :user_id)
   end
 
   def product
-    @product||= Product.find(params[:id])
+    @product ||= Product.find(params[:id])
   end
 end
